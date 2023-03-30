@@ -1,0 +1,408 @@
+<!DOCTYPE HTML>
+<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+	<title>Оригинальная флэшка</title>
+	
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<meta name="viewport" content="width=device-width, initial-scale = 0.75, user-scalable = no">
+    
+    <link rel="stylesheet" id="camera-css"  href="css/flexslider.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+	
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	
+	
+	<!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="images/ico/favicon.png">
+	
+	
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/slider/jquery.flexslider-min.js"></script>
+	<script src="js/slider/functions.js" type="text/javascript"></script>
+	<script src="js/slider/script.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+	<script type="text/javascript" src="js/waypoints.min.js"></script>
+	
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.src.js"></script>
+	<![endif]-->
+	
+	<script type="text/javascript">
+		$(document).ready(function(){	
+			$("#ajax-contact-form").submit(function() {
+				var str = $(this).serialize();		
+				$.ajax({
+					type: "POST",
+					url: "contact_form/contact_process.php",
+					data: str,
+					success: function(msg) {
+						// Message Sent - Show the 'Thank You' message and hide the form
+						if(msg == 'OK') {
+							result = '<div class="notification_ok">Ваше сообщение отправлено. Мы обязательно с Вами свяжемся. Спасибо!</div>';
+							$("#fields").hide();
+						} else {
+							result = msg;
+						}
+						$('#note').html(result);
+					}
+				});
+				return false;
+			});															
+		});		
+	</script>
+	
+</head>
+
+<body>
+
+<div class="menu">	
+	<div class="container clearfix">
+
+		<div id="logo" class="fleft">
+			<img class="logo_big" src="images/logo.png"><img class="logo_small" src="images/logo_small.png">
+		</div>
+		
+		<div id="nav" class="fright">
+			<ul class="navigation">
+				<li data-slide="1">Главная</li>
+				<li data-slide="2">Флэшки</li>
+				<li data-slide="4">Новинки</li>
+				<li data-slide="5">Галерея</li>
+				<li data-slide="6">Отзывы</li>
+				<li data-slide="10">Заказать</li>
+			</ul>
+		</div>
+	
+	</div>
+</div>
+
+
+<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
+	<div class="effect_2 padding_slide1">
+		<div class="container clearfix">
+			<div id="content" class="grid_12">
+				<div class="filtr_bg">
+					<h1>Мы придаём серьёзному электронному носителю привлекательную и оригинальную форму!</h1>
+					<h2>+7 (812) 905-38-15</h2>
+					<div class="bord_in_red"></div>
+					<p>Серийное производство USB-флэшек из PVC и силикона. Наш наглядный пример единства двух важнейших категорий. В извечном споре побеждает гармония!</p>
+				</div>
+				<a class="button" title="" data-slide="2">Далее</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+		
+		<div id="content" class="grid_12">
+			<h1>Наши флэшки</h1>
+			<h2>Мы изготавливаем необычные флэшки, купить которые невозможно в другом месте, так как Ваша партия будет произведена с учетом Ваших требований и по индивидуальному дизайну. У нас собственное производство, благодаря этому Вы можете заказать флэшки по низким ценам.</h2>
+			<img class="icon_img" src="images/icon10.png" />
+		</div>
+		<div id="content" class="grid_12">
+			<h4>Сделайте заказ и мы приятно Вас удивим качеством, сроками и стоимостью!</h4>
+			<img class="about_img" src="images/about_img1.jpg" alt="" />
+			
+            <table>
+            <tr>
+            	<td width="130"><b>Тираж(Партия)</b></td>
+                <td width="100" ><b>Объем 8Гб</b></td>
+                <td width="100" ><b>Объем 16Гб</b></td>
+            </tr>
+            
+            <tr>
+            	<td width="130">100 штук</td>
+                <td width="100">от 690 руб</td>
+                <td width="100">от 790 руб</td>
+            </tr>
+            
+             <tr>
+            	<td width="130">300 штук</td>
+                <td width="100">от 560 руб</td>
+                <td width="100">от 660 руб</td>
+            </tr>
+            
+             <tr>
+            	<td width="130">500 штук</td>
+                <td width="100">от 430 руб</td>
+                <td width="100">от 560 руб</td>
+            </tr>
+            
+             <tr>
+            	<td width="130">1000 штук</td>
+                <td width="100">от 390 руб</td>
+                <td width="100">от 480 руб</td>
+            </tr>
+            
+             <tr>
+            	<td width="130">2000 штук</td>
+                <td width="100">от 360 руб</td>
+                <td width="100">от 450 руб</td>
+            </tr>
+            
+             <tr>
+            	<td width="130">3000 штук</td>
+                <td width="100">от 330 руб</td>
+                <td width="100">от 420 руб</td>
+            </tr>
+            
+            
+            </table>
+            
+           
+           <br>
+            
+            
+			<p> Стоимость указана за флэшкарту простой формы, в одном цвете. Размеры - длина 50 мм, ширина 30 мм, высота 10 мм. Не забываем, что Ваша флэшка уникальна, поэтому для расчёта точной стоимости - свяжитесь с нами! Помимо цены, наши специалисты помогут Вам определиться с графическим макетом и размерами, а также ответят на другие Ваши вопросы!</p>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
+	<div class="effect_2 padding_slide3">
+		<div class="container clearfix">
+		
+			<div id="content" class="grid_12">
+				<p>Своё производство → низкие цены!</p>
+			</div>
+		
+		</div>
+	</div>
+</div>
+
+
+
+<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+		
+		<div id="content" class="grid_12">
+			<h1><span>Наши новинки!</span></h1>
+			<h2>Каждый день наши дизайнеры и инженеры придумывают для Вас что-то новое и удивительное. Человек постоянно ищет ответ на вопрос, - «могут ли простые вещи приносить удовольствие?» Наш ответ, - МОГУТ!  </h2>
+			<img class="icon_img" src="images/icon11.png" />
+			<div>
+				<!-- portfolio_block -->
+				<ul class="item gallery-list">                                  
+					<li class="grid_3">
+						<div class="hover_img">
+							<div class="img_bord"><img src="images/img_bord.png" /></div>
+							<img src="images/portfolio/1.jpg" alt="" />
+							<div class="portfolio_descr">
+								<p>Флэшка-мотоцикл</p>
+								<span>Сделана специально для магазина «Auto-Moto»</span>
+							</div>
+						</div>
+					</li>
+					<li class="grid_3">
+						<div class="hover_img">
+							<div class="img_bord"><img src="images/img_bord.png" /></div>
+							<img src="images/portfolio/2.jpg" alt="" />
+							<div class="portfolio_descr">
+								<p>Флэшка-пазл</p>
+								<span>Выпущена в серию для компании «Cubus»</span>
+							</div>
+						</div>
+					</li>
+					<li class="grid_3">
+						<div class="hover_img">
+							<div class="img_bord"><img src="images/img_bord.png" /></div>
+							<img src="images/portfolio/3.jpg" alt="" />
+							<div class="portfolio_descr">
+								<p>Флэшка-BMW</p>
+								<span>Сделана для атосалона BMW</span>
+							</div>
+						</div>
+					</li>
+					<li class="grid_3">
+						<div class="hover_img">
+							<div class="img_bord"><img src="images/img_bord.png" /></div>
+							<img src="images/portfolio/4.jpg" alt="" />
+							<div class="portfolio_descr">
+								<p>Флэшка-акула</p>
+								<span>Сделана эксклюзивно для финансовой компании</span>
+							</div>
+						</div>
+					</li>
+					
+				
+					<div class="clear"></div>
+				</ul>   
+				<!-- //portfolio_block -->   
+			</div>
+			
+		</div>
+	
+	</div>
+</div>
+
+
+<div class="slide" id="slide5" data-slide="5" data-stellar-background-ratio="0.5">
+	<div class="padding_slide5">
+		<div class="bord_top"></div>
+		<div class="effect_2"></div>
+		<div class="container clearfix">
+		
+			<div id="content" class="grid_12">
+				
+			</div>
+			
+		</div>
+		
+		<div class="flexslider">
+			<ul class="slides">
+				<li><img src="images/slider/1.jpg" alt=""/></li>
+				<li><img src="images/slider/2.jpg"  alt=""/></li>
+				<li><img src="images/slider/3.jpg" alt=""/></li>
+				<li><img src="images/slider/4.jpg" alt=""/></li>
+				<li><img src="images/slider/5.jpg"  alt=""/></li>
+				<li><img src="images/slider/6.jpg" alt=""/></li>
+				<li><img src="images/slider/7.jpg" alt=""/></li>
+				<li><img src="images/slider/8.jpg"  alt=""/></li>
+				<li><img src="images/slider/10.jpg" alt=""/></li>
+                <li><img src="images/slider/9.jpg" alt=""/></li>
+                <li><img src="images/slider/11.jpg" alt=""/></li>
+                <li><img src="images/slider/12.jpg" alt=""/></li>
+                <li><img src="images/slider/13.jpg" alt=""/></li>
+                <li><img src="images/slider/14.jpg" alt=""/></li>
+                <li><img src="images/slider/15.jpg" alt=""/></li>
+                <li><img src="images/slider/16.jpg" alt=""/></li>
+                <li><img src="images/slider/17.jpg" alt=""/></li>
+                <li><img src="images/slider/18.jpg" alt=""/></li>
+                <li><img src="images/slider/19.jpg" alt=""/></li>
+                <li><img src="images/slider/20.jpg" alt=""/></li>
+                <li><img src="images/slider/21.jpg" alt=""/></li>
+                <li><img src="images/slider/22.jpg" alt=""/></li>
+                <li><img src="images/slider/23.jpg" alt=""/></li>
+                <li><img src="images/slider/24.jpg" alt=""/></li>
+                <li><img src="images/slider/25.jpg" alt=""/></li>
+                <li><img src="images/slider/26.jpg" alt=""/></li>
+                <li><img src="images/slider/27.jpg" alt=""/></li>
+                <li><img src="images/slider/28.jpg" alt=""/></li>
+			</ul>
+		</div>
+		
+	</div>
+</div>
+
+
+
+<div class="slide" id="slide6" data-slide="6" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+		
+		<div id="content" class="grid_12">
+			<h1><span>Отзывы</span></h1>
+			<h2>К нам обращаются самые разные компании - это и небольшие предприятия, и представители крупного бизнеса. Все они хотят воплотить свои фантазии на таком простом предмете как флэшка. И мы всегда рады клиенту и идем ему навстречу, даже порой когда заказы кажутся невыполнимыми. Решая такие задачи, мы изо дня в день повышаем свой уровень дизайнерской и инженерной мысли. Именно поэтому к нам обращаются зачастую заказчики, которые не смогли добиться желаемого результата в других фирмах! </h2>
+			<img class="icon_img" src="images/icon12.png" />
+		</div>
+		<div class="clear"></div>
+		
+		<div class="grid_12 events_cont">
+			<img class="about_img" alt="" src="images/events_img1.jpg">
+			<h4>Дарья Иванова</h4>
+			<span>14 января 2017 года</span>
+			<p>— У меня небольшой сувенирный магазин в Санкт-Петербурге. Для увеличения своей линейки товаров, сделала заказ на минимальную партию флэшек. Ребята сделали для меня великолепный дизайн, быстро запустили в производство и, также быстро, доставили партию прямо к моему магазину. Прошло совсем немного времени и все флэшки были просто сметены с прилавка! Особенной популярностью флэшки пользовались у туристов. Теперь постоянно обращаюсь за новыми моделями. В моем любимом магазинчике, флэшки по-прежнему очень быстро раскупаются. Появились даже постоянные клиенты, которые покупают сразу по несколько штук. Благодарю ребят за проделанную работу и с нетерпением жду новой партии!</p>
+		</div>
+		<div class="clear"></div>
+		<div class="grid_12 events_cont">
+			<img class="about_img" alt="" src="images/events_img2.jpg">
+			<h4>Артур Гладышев</h4>
+			<span>22 декабря 2016 года</span>
+			<p>— Мое производство находится очень далеко от крупного населенного пункта. С интернетом там совсем плохо. Когда мои менеджеры ездят к клиентам они всегда берут с собой корпоративные флэшки, сделанные по индивидуальному заказу. Специально для своих сотрудников я заказал сразу крупную партию, поскольку так получается совсем дешево. А с некторых пор, когда мои работники уезжают к клиенту на презентацию нашей продукции, флэшки оставляются потенциальным клиентам в подарок. Ребятам, которые произвели нам флэшки, хочу сказать большое спасибо за качество, сроки и, конечно же, цены!</p>
+		</div>
+		<div class="clear"></div>
+	
+	</div>
+</div>
+
+
+<div class="slide" id="slide7" data-slide="7" data-stellar-background-ratio="0.5">
+	<div class="effect_2 padding_slide7">
+		<div class="container clearfix">
+		
+			<div id="content" class="grid_12">
+				<span>Флэшки с логотипом - это полезный сувенир и один из самых выигрышных маркетинговых ходов!</span>
+			</div>
+		
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="slide" id="slide10" data-slide="10" data-stellar-background-ratio="0.5">
+	<div class="container clearfix">
+		
+		<div id="content" class="grid_12">
+			<h1><span>Наши контакты</span></h1>
+            <h2>Позвоните нам по телефону <strong style="color: #0f5a6f;">+7 (812) 905-38-15</strong> и мы обсудим все детали Вашего заказа. Мы принимаем звонки каждый день - с 9:00 до 21:00. Вы также можете, в любое время, задать интересующий вопрос в специальной форме ниже или написать нам письмо по адресу <a href="mailto:9053815@mail.ru" style="color: #0f5a6f;">9053815@mail.ru</a>  </h2>
+            <h2>Наше производство находится в Санкт-Петербурге, но доставка осуществляется по всем регионам России с помощью надёжных и проверенных транспортных компаний!</h2>
+			<img class="icon_img" src="images/icon13.png" />
+		</div>
+		<div class="clear"></div>
+		
+		<div class="grid_3 contact_det_block">
+			<p>Оставьте нам заявку в любое время. Мы с Вами свяжемся!</p>
+			<ul class="foot_block_intouch">
+				<li class="touch_phone"><p>+7 (812) 905-38-15</p></li>
+				<li class="touch_clock"><p>09:00-21:00 (в т.ч. выходные)</p></li>
+				<li class="touch_mail"><a href="mailto:9053815@mail.ru">9053815@mail.ru</a></li>
+				<li class="touch_site"><a href="http://fleshka-spb.ru/">www.fleshka-spb.ru</a></li>
+				<li class="touch_adress"><p>СПб, 3-й Верхний переулок 8</p></li>
+			</ul>
+		</div>
+		<div class="grid_9 omega">
+			<div class="contact_form">  
+				<div id="note"></div>
+				<div id="fields">
+					<form id="ajax-contact-form" action="">
+						<input type="text" name="name" value="" placeholder="Назовите Ваше Имя" />
+						<input type="text" name="subject" value="" placeholder="Укажите Телефон" />
+						<input type="text" name="email" value="" placeholder="Введите Email" />
+						<textarea name="message" id="message" placeholder="Введите Ваше Сообщение"></textarea>
+						<div class="clear"></div>
+						<input type="reset" class="contact_btn" value="Очистить" />
+						<input type="submit" class="contact_btn send_btn" value="Отправить" />
+						<div class="clear"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	
+	</div>
+	
+	<div id="map_block"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="images/map.jpg"></iframe></div>
+	
+</div>
+
+
+<div id="footer">
+	<div class="container clearfix">
+		<div class="copyright">&copy; 2015 | <a href="javascript:void(0);">Все права защищены</a></div>
+		<div id="back_top"><a class="button" title="" data-slide="1">Наверх</a></div>
+	</div>
+</div>
+
+
+</body>
+</html>
